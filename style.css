@@ -47,35 +47,40 @@ a:focus {
     border: none;
 }
 
-.navbar{
+.navbar {
     background-color: #ff0000 !important;
     color: white;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none !important;
 }
-.nav-item{
+
+.nav-item {
     font-size: larger;
 }
 
 @media only screen and (max-width: 768px) {
-    .nav-item{
+    .nav-item {
         padding-bottom: 20px;
     }
 }
+
 @media only screen and (max-width: 600px) {
-    .nav-item{
+    .nav-item {
         font-size: medium;
         padding-bottom: 10px;
     }
 }
+
 .cart {
-    cursor: pointer; /* Making the cart clickable */
+    cursor: pointer;
+    /* Making the cart clickable */
 }
 
 .cart:hover {
-    background-color: #9f1919; /* Changing background color on hover */
+    background-color: #9f1919;
+    /* Changing background color on hover */
 }
 
 /* Adding some padding to the link to make it more clickable */
@@ -85,46 +90,56 @@ a:focus {
 
 .carousel-div {
     width: 100%;
-    height:650px; /* Set the height */
-    overflow: hidden; /* Hide overflow content */
+    height: 650px;
+    /* Set the height */
+    overflow: hidden;
+    /* Hide overflow content */
 }
 
 .carousel-inner {
     width: 100%;
-    height: 100%; /* Make the carousel items fill the height */
+    height: 100%;
+    /* Make the carousel items fill the height */
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%; /* Make the images fill the carousel */
-    object-fit: cover; /* Cover the whole area with the image */
+    height: 100%;
+    /* Make the images fill the carousel */
+    object-fit: cover;
+    /* Cover the whole area with the image */
 }
 
 @media only screen and (max-width: 600px) {
     .carousel-div {
         width: 100%;
-        height: 200px; /* Set the height */
-        overflow: hidden; /* Hide overflow content */
+        height: 200px;
+        /* Set the height */
+        overflow: hidden;
+        /* Hide overflow content */
     }
-    
+
 }
 
-.con1-txt{
+.con1-txt {
     font-family: 'Italiana', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-size: 70px;
 }
-.text-30{
+
+.text-30 {
     font-size: 30px;
 }
-.text-20{
+
+.text-20 {
     font-size: 20px;
 }
-.text-red{
+
+.text-red {
     color: #ff0000;
 }
 
-.signinDiv{
+.signinDiv {
     width: 100px;
     height: 45px;
     background-color: #ff0000;
@@ -135,57 +150,59 @@ a:focus {
     align-items: center;
     color: white;
     font-size: 20px;
-    
+
 
 }
 
-.signinDiv a{
+.signinDiv a {
     text-decoration: none;
     color: white;
 }
 
-.registerDiv{
+.registerDiv {
     width: 100px;
     height: 45px;
     background-color: #ffffff;
     border: 2px solid #ff0000;
     border-radius: 0 50px 50px 0;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center !important;
     color: #ff0000;
     font-size: 20px;
-    
+
 
 }
 
-.registerDiv a{
+.registerDiv a {
     text-decoration: none;
-    color:  #ff0000;
+    color: #ff0000;
 }
 
-.card1{
+.card1 {
     height: 350px;
     margin-bottom: 40px;
 }
-.img1{
+
+.img1 {
     height: 185px;
 }
 
-.section-bg-menu{
-    
-    background-image: linear-gradient(to right, rgba(255,255,255, 0.7) 0 100%), url(assets/img/home_page/background-section-menu.png);
+.section-bg-menu {
+
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0 100%), url(assets/img/home_page/background-section-menu.png);
     /* background-image:url('/img/home_page/background-section-menu.png'); */
 }
-.section-bg-menu .btn{
+
+.section-bg-menu .btn {
     border-radius: 5px;
 }
 
-.specialOfferdiv{
+.specialOfferdiv {
     background-color: black;
 }
 
-.offer-txt{
+.offer-txt {
     font-family: 'Italiana', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Risque', serif;
@@ -193,61 +210,126 @@ a:focus {
     color: white;
 }
 
-.offer-btn{
+.offer-btn {
 
     background-color: #ff0000;
-    
+
     border-radius: 50px;
-   
+
     width: 350px;
 }
-.offer-btn{
+
+.offer-btn {
     color: white;
     font-family: 'Italiana', sans-serif;
     font-size: 45px;
 }
 
-.offer-div{
+.offer-div {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(assets/img/home_page/offer_image.jpg);
-    
+
 }
 
-#footerSection{
-    background-color: black;
-    
+@media only screen and (max-width: 600px) {
+
+    .offer-txt {
+        font-size: 100px;
+        color: white;
+    }
+
+    .offer-div {
+        display: none;
+    }
+
+    .offer-btn {
+        font-size: 30px;
+    }
+
+    .specialOfferdiv {
+        position: relative;
+        /* filter: brightness(50%); */
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(assets/img/home_page/offer_image.jpg);
+        
+    }
+    .specialOfferdiv::before {
+        content: ''; /* Required for pseudo-elements */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5); /* Adjust the opacity here */
+    }
+    .offer-text-div {
+        position: relative; /* Ensure text div stays on top */
+        z-index: 1; /* Ensure text div stays on top */
+        /* Your styles for the text div here */
+    }
+   
 }
-.snamefooter{
+
+
+#footerSection {
+    background-color: black;
+
+}
+
+.snamefooter {
     font-size: 40px !important;
 }
 
-ul{
+ul {
     list-style: none;
 
 }
 
 @media only screen and (max-width: 770px) {
-   
-    ul li{
-       display: inline;
-       /* display: flex; */
-       padding: 10px;
-       justify-content: space-between;
-    
+
+    ul li {
+        display: inline;
+        /* display: flex; */
+        padding: 10px;
+        justify-content: space-between;
+
     }
 }
 
-#cartsmall{
-    background-color: yellow;
-    height: 70px;
-    width: 70px;
+
+#cartsmall {
+
+    z-index: 11111;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    width: 60px;
     border-radius: 50px;
 
     position: fixed;
     bottom: 70px;
     right: 20px;
-   
-    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.088);
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    #cartsmall {
+        display: none !important;
+    }
+}
+
+
+.fa-shopping-bag {
+    font-size: xx-large;
+    color: #ff0000;
 }
