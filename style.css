@@ -255,23 +255,29 @@ a:focus {
         background-position: center center;
         background-repeat: no-repeat;
         background-image: url(assets/img/home_page/offer_image.jpg);
-        
+
     }
+
     .specialOfferdiv::before {
-        content: ''; /* Required for pseudo-elements */
+        content: '';
+        /* Required for pseudo-elements */
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, .5); /* Adjust the opacity here */
+        background-color: rgba(0, 0, 0, .5);
+        /* Adjust the opacity here */
     }
+
     .offer-text-div {
-        position: relative; /* Ensure text div stays on top */
-        z-index: 1; /* Ensure text div stays on top */
+        position: relative;
+        /* Ensure text div stays on top */
+        z-index: 1;
+        /* Ensure text div stays on top */
         /* Your styles for the text div here */
     }
-   
+
 }
 
 
@@ -334,11 +340,58 @@ ul {
     color: #ff0000;
 }
 
-.menu-bg{
+.menu-bg {
     background-color: #eaeaea;
- }
- .creason__info {
-     border: 2px solid #4d4d4d98;
- 
- }
- 
+}
+
+.creason__info {
+    border: 2px solid #4d4d4d98;
+
+}
+
+.menu-bg a {
+    text-decoration: none;
+}
+
+.sticky {
+    position: sticky;
+    top: 170px;
+    /* height: 100dvb; */
+}
+
+
+.searchIcon {
+    background: red;
+}
+
+.categorylist {
+    background-color: #ffffff;
+}
+
+.categorylist a {
+    color: black;
+}
+
+.searchMenu input:focus {
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+
+}
+.card-title{
+    font-weight: 600;
+    font-size: 20px;
+}
+.card-text,.font-thin{
+    font-weight: 100;
+}
+.font-semibold{
+    font-weight: 600;
+}
+.text-20{
+    font-size: 20px;
+}
+/* .form-control:focus {
+    
+  } */
