@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html>
+
 
 <head>
   <!-- Required meta tags -->
@@ -9,14 +10,17 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Flavor Fiest | HOME</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <title>Flavor Fiest | Menu</title>
+  <link rel="stylesheet" href="../style.css">
 
 
 </head>
 
 <body>
+  <!-- Dont Delete or Edit start  -->
   <header class="bg-white sticky-top">
     <div class="row  d-none d-md-block top-header-div mx-auto overflow-hidden">
 
@@ -75,20 +79,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="index.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium"
+              <a href="./../index.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium"
                 aria-current="page">Home</a>
             </li>
             <li class="nav-item">
-              <a href="./pages/menu.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Menu</a>
+              <a href="/pages/menu.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Menu</a>
             </li>
             <li class="nav-item">
-              <a href="pages/aboutUs.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">About us</a>
+              <a href="/pages/aboutUs.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">About us</a>
             </li>
             <li class="nav-item">
-              <a href="pages/contact.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Contact</a>
+              <a href="/pages/contact.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Contact</a>
             </li>
             <li class="nav-item d-block d-md-none">
-              <a href="pages/contact.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Sign in /
+              <a href="/pages/contact.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Sign in /
                 Register</a>
             </li>
 
@@ -122,165 +126,142 @@
 
     </div>
   </div>
-  <!-- cart icon for small devices -->
+  <!-- Dont Delete or Edit End  -->
 
-  <section class="carouselmain">
-    <div class="carousel-div">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item ">
-            <img src="./assets/img/home_page/head-carosel_img1.jpg" class="d-block  w-100" alt="1">
+  <!-- Start Your Code Here  -->
+
+  <div class="continer-fluied">
+    <div class="col-md-12">
+      <div class="row mx-auto overflow-hidden">
+        <div class="col-md-6 animate__animated animate__fadeInLeft">
+          <img src="./../assets/img/contact/mm.png" alt="" width="100%">
+        </div>
+        <div class="col-md-6">
+          <div class="contat-div animate__animated animate__backInRight">
+            <div class="row">
+              <div class="col-md-3 flex items-center p-4">
+                <img src="/assets/img/contact/call.png" alt="" width="50px">
+              </div>
+              <div class="col-md-9">
+                <h4 class="text-[25px] font-thin">Contact Number</h4>
+                <hr>
+                <p class="text-[17px] font-normal"><a href="tel:+325-12345-65478">077 0204135
+                    <br>011 2544544
+                  </a></p>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item active">
-            <img src="./assets/img/home_page/coverimage1.jpg" class="d-block w-100" alt="...2">
+          <div class="contat-div div-2 animate__animated animate__backInRight">
+            <div class="row">
+              <div class="col-md-3 flex items-center p-4">
+                <img src="/assets/img/contact/email.png" alt="" width="50px">
+              </div>
+              <div class="col-md-9 d-flex align-items-center justify-content-center">
+                <div class="flex-col text-center">
+                  <h4 class="text-[25px] font-thin">Email Address</h4>
+                  <hr>
+                  <p class="text-[17px] font-normal"><a
+                      href="mailto:flavorfiestorders@gmail.com">flavorfiestorders@gmail.com</a></p>
+
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/home_page/coverimage3.jpg" class="d-block w-100" alt="...3">
+          <div class="contat-div animate__animated animate__backInRight">
+            <div class="row">
+              <div class="col-md-3 flex items-center p-4">
+                <img src="/assets/img/contact/map (1).png" alt="" width="50px">
+              </div>
+              <div class="col-md-9">
+                <h4 class="text-[25px] font-thin">Our Location</h4>
+                <hr>
+                <p class="text-[17px] font-normal">Flavor Fiest food , Hambanthota Road , Matara 01, Sri Lanka</p>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+
+
     </div>
 
 
-  </section>
-
-
-
-  <div class="container mt-5 text-center">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="font-medium con1-txt">Delivering The Best</h1>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <p class="text-30">Flavor Fiest &nbsp;Matara</p>
-    </div>
-
-    <hr class="text-red m-0">
-    <div class="row mt-4">
-      <p class="text-20">Get the best of Flavor Fiest Matara to your doorstep. Cateringbto your desire
-        is our pleasure</p>
-    </div>
   </div>
 
-  <section class="bg-gray-500 pb-11 section-bg-menu mt-3 pt-3">
-    <div class="container mt-5 text-center">
-      <div class="row">
-        <div class="col-md-12 mt-7">
-          <h1 class="text-[40px] font-semibold tracking-wider">Most <span class="text-red">Recommended</span> Meals</h1>
-          <hr class="m-7">
-        </div>
-      </div>
-      <div class="row mx-auto mt-5">
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/section_one/img4.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-[25px] font-semibold">Cheesy Chicken Garlic Bread</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/section_one/img3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-[25px] font-semibold">Kotchchi Sausage Puff Pastry</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img//menu/rice/images (2) copy.jpg" alt="Card image cap">
-            <div class="card-body"><br>
-              <h5 class="card-title text-[25px] font-semibold">Italian mushroom risotto</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/rice/images (2) copy 2.jpg" alt="Card image cap">
-            <div class="card-body"><br>
-              <h5 class="card-title text-[25px] font-semibold">Parboiled Rice</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
-        <!-- <div class="row mx-auto mt-11"> -->
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/pasta/img1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-[25px] font-semibold">Spaghetti with Chicken</h5><br>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/pasta/img2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-[25px] font-semibold">Spaghetti Bolognaise Chicken</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/cakes/img2.jpg" alt="Card image cap">
-            <div class="card-body"><br>
-              <h5 class="card-title text-[25px] font-semibold">Crispy Nougat Cake</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 col-sm-6">
-          <div class="card card1">
-            <img class="card-img-top img1" src="./assets/img/menu/cakes/img3.jpeg" alt="Card image cap">
-            <div class="card-body"><br>
-              <h5 class="card-title text-[25px] font-semibold">Chocolate fudge cake</h5>
-              <a href="./pages/menu.html" class="btn btn-danger rounded-full mt-3">View Details</a>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
-      </div>
-  </section>
+  <section class="contact mt-[90px]">
+    <div class="container">
+      <div class="row mt-4">
 
-  <section class="specialOffers">
-    <div class="container-fluied specialOfferdiv">
-      <div class="row mx-auto">
-        <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center" style="height: 650px;">
-          <div class="text-center offer-text-div">
-
-            <h1 class="offer-txt">Special</h1>
-            <h1 class="offer-txt">Offers</h1>
-            <a href="#" class="btn mt-3 p-2 offer-btn ">Order Now</a>
-
-          </div>
+        <div class="col-md-7 col-sm-12">
+          <iframe id="map-canvas" class="map_part" width="100%" height="450" frameborder="0" scrolling="no"
+            marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=university of ruhuna&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered
+            by <a href="https://embedgooglemaps.com">html embed google maps</a> and <a href="https://casinomga.se/">nya
+              mga casino</a></iframe>
         </div>
 
-        <div class="col-md-6 offer-div">
+        <div class="col-md-5 col-sm-12 p-4" style=" border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+          <h3 class="line-bottom mt-0 text-[30px] uppercase mb-3">
+            Submit your message</h3>
+          <form action="" method="post">
+            <div class="row">
+              <div class="col-sm-6 pb-3">
+                <div class="form-group">
+                  <input name="f_name" type="text" class="form-control" placeholder="First name" required>
+                </div>
+              </div>
+              <div class="col-sm-6 pb-3">
+                <div class="form-group">
+                  <input name="l_name" type="text" class="form-control" placeholder="Last name" required>
+                </div>
+              </div>
+              <div class="col-sm-6 pb-3">
+                <div class="form-group">
+                  <input name="email" type="email" class="form-control" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="col-sm-6 pb-3">
+                <div class="form-group">
+                  <input name="number" type="text" class="form-control" placeholder="Phone number" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea name="message" class="form-control required" rows="5" placeholder="Your message"></textarea>
+                </div>
+
+              </div>
+              <div class="col-md-12 mt-3">
+                <input type="submit" value="Send Message" class="btn btn-primary mr-5"
+                  style="background-color:#007bff;">
+              </div>
+            </div>
+          </form>
+
+          <!--<ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
+            <li><a href="#" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" data-bg-color="#006f37"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
+          </ul>-->
 
         </div>
       </div>
     </div>
-
   </section>
 
+
+
+
+
+
+
+
+
+  <!-- Start Your Code Here -->
+
+  <!-- Dont Delete or Edit start  -->
   <footer id="footerSection" class="mt-4 pt-4 pb-3">
 
     <div class="container">
@@ -387,10 +368,56 @@
     </div>
 
   </footer>
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  <script src="./../script.js"></script>
+  <script src="./../food_cart.js"></script>
+  <!-- Dont Delete or Edit End  -->
 </body>
+<style>
+  .card {
+    background-color: #ffffff7e;
+    border-radius: 10px;
+  }
+
+  .card-content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: rgb(11, 129, 197);
+    font-size: large;
+    color: white;
+
+  }
+
+  .accordion-collapse {
+    background-color: rgb(11, 129, 197);
+    font-size: small;
+    color: white;
+
+  }
+
+  .card-text {
+    font-size: 10pt;
+    font-weight: 600;
+    font-family: Poppins;
+    text-align: justify;
+  }
+
+  .card-title {
+    font-weight: 600;
+    font-family: Poppins;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #03045E;
+
+  }
+</style>
 
 </html>
