@@ -392,6 +392,25 @@ ul {
 .text-20{
     font-size: 20px;
 }
-/* .form-control:focus {
-    
-  } */
+
+.contat-div{
+    width: 400px;
+    height: 100px;
+    background-color: rgba(226, 226, 226, 0.192);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 45px 0px;
+}
+
+#contactPage .mainDiv a{
+    text-decoration: none;
+    color: black;
+}
+
+#contactPage hr{
+   margin: 0;
+}
+
+.div-2{
+    margin-left: 200px;
+}
