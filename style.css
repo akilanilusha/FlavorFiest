@@ -379,21 +379,26 @@ ul {
 
 
 }
-.card-title{
+
+.card-title {
     font-weight: 600;
-    font-size: 20px;
-}
-.card-text,.font-thin{
-    font-weight: 100;
-}
-.font-semibold{
-    font-weight: 600;
-}
-.text-20{
     font-size: 20px;
 }
 
-.contat-div{
+.card-text,
+.font-thin {
+    font-weight: 100;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.contat-div {
     width: 400px;
     height: 100px;
     background-color: rgba(226, 226, 226, 0.192);
@@ -402,15 +407,83 @@ ul {
     margin: 45px 0px;
 }
 
-#contactPage .mainDiv a{
+.sm-contat-div {
+
+    height: 100px;
+    background-color: rgba(226, 226, 226, 0.192);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 10px;
+}
+
+#contactPage .mainDiv a {
     text-decoration: none;
     color: black;
 }
 
-#contactPage hr{
-   margin: 0;
+#contactPage hr {
+    margin: 0;
 }
 
-.div-2{
+.div-2 {
     margin-left: 200px;
+}
+
+.contact {
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .contact {
+        margin: 40px 10px;
+    }
+}
+
+.signin_background {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(assets/img/signin/background-section-menu.png);
+}
+
+.sign_content {
+    background-color: white;
+    padding: 30px;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    color: #161616;
+    background-color: #fff;
+    border-color: #000000;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.text-60 {
+    font-size: 60px;
+}
+
+.text-30 {
+    font-size: 30px;
+}
+
+.loginButton {
+    background: #ff0000;
+    width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .text-60 {
+        font-size: 50px;
+    }
+    .sign_content {
+        
+        margin-top: 0;
+    }
+       
+
 }
