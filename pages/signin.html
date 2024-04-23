@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 
 <head>
   <!-- Required meta tags -->
@@ -11,15 +10,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <title>Flavor Fiest | About Us</title>
+  <title>Flavor Fiest | Sign</title>
   <link rel="stylesheet" href="../style.css">
 
 
 </head>
+  
+</head>
 
-<body>
+<body class="signin_background">
+  <!-- Dont Delete or Edit start  -->
   <header class="bg-white sticky-top">
     <div class="row  d-none d-md-block top-header-div mx-auto overflow-hidden">
 
@@ -50,12 +50,12 @@
         <div class="col-md-4 col-sm-8 ">
           <h1 class="site-name text-center ">Flavor Fiest</h1>
         </div>
-        <div class="col-md-4 d-flex justify-content-end" onClick="window.location='./signin.html';">
+        <div class="col-md-4 d-flex justify-content-end" onClick="window.location='/pages/signin.html';">
           <div class="signinDiv text-center">
-            <a href="./signin.html">Sign in</a>
+            <a href=/pages/signin.html>Sign in</a>
           </div>
           <div class="registerDiv">
-            <a href="./signin.html">Register</a>
+            <a href="/pages/signin.html">Register</a>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@
               <a href="./contact.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Contact</a>
             </li>
             <li class="nav-item d-block d-md-none">
-              <a href="./signin.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Sign in /
+              <a href="./contact.html" class=" text-white rounded-md px-3 py-2 text-lg font-medium">Sign in /
                 Register</a>
             </li>
 
@@ -116,65 +116,85 @@
     <!-- menubar  end-->
 
   </header>
-
-  <!-- cart icon for small devices -->
-  <div id="cartsmall">
-
-    <a href="./add_cart.html">
-      <div class="cartbackground">
-        <i class="fa fa-shopping-bag"></i>
-
-      </div>
-    </a>
-  </div>
+  <!-- Dont Delete or Edit End  -->
 
   <!-- Start Your Code Here  -->
-  <div class="container overflow-hidden">
-    <div class="col-md-12">
-      <section id="vission" class="">
-        <div class="row justify-content-center align-items-center mx-auto" style="padding-top:70px;">
-          <div class="col-md-6 text-center  ">
-            <div class="animate__animated animate__fadeInLeft" id="vissiontxt">
-              <h1 class="text-uppercase font-semibold mb-5" style="font-size: 45px;">Our Vision</h1>
-              <p class="text-20 font-thin">"To be the leading and most trusted food delivery platform, connecting
-                people with their favorite meals seamlessly, while fostering a sense of community and contributing to a
-                world where everyone has access to delicious and diverse culinary experiences."</p>
-            </div>
 
-          </div>
-          <div class="col-md-6 animate__animated animate__fadeInRight" id="visionImg">
-            <img src="./../assets/img/aboutus/team.png" alt="" width="100%" class="">
-          </div>
-        </div>
-      </section>
+  <div class="container sign_content ">
 
-      <section id="mission">
-        <div class="row justify-content-center align-items-center mt-5 mx-auto">
-          <div class="col-md-6" id="missionImg">
-            <img src="./../assets/img/aboutus/visson.png" width="100%" alt="">
-          </div>
-          <div class="col-md-6 text-center ">
-            <div class="animate__animated " id="missiontxt">
-              <h1 class="text-uppercase font-semibold mb-5" style="font-size: 45px;">Our mission</h1>
-              <div class="animate__animated animate__fadeInRight">
-                <p class="text-20 font-thin">
-                  At Flavor Fiest , our mission is to revolutionize the way people experience food by providing a
-                  convenient, reliable, and diverse platform that connects customers with a wide array of culinary
-                  delights.
-                </p>
-
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
-
+    <div class="row text-center">
+      <h1 class="text-60">My Account</h1>
+      <hr>
     </div>
+    <div class="row">
+      <!-- login -->
+      <div class="col-md-6 pe-5">
+        <div class="row">
+          <div class="col-md-12 mt-4 mb-3">
+            <h3 class="text-30 font-semibold">Login</h3>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group mb-4">
+              <label for="email" class="font-medium mb-2">Username Or Email address<span
+                  class="text-red-700">*</span></label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email">
+              <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group mb-4">
+              <label for="password" class="font-medium mb-2">Password<span class="text-red-700">*</span></label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" value="" id="remember_me" checked>
+              <label class="form-check-label" for="remember_me" class="font-medium">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <a class="btn loginButton text-white ">Login</a>
+          </div>
+
+
+          <div class="col-md-12">
+            <div class="col-md-3">
+              <a href="" class="underline">Frogot Password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- register -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12 mt-4 mb-3">
+            <h3 class="text-30 font-semibold">Register</h3>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group mb-4">
+              <label for="email" class="font-medium mb-2">Email address<span class="text-red-700">*</span></label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email">
+            </div>
+          </div>
+
+          <div class="col-md-12  mb-4">
+            <p>A link to set a new password will be sent to your email address.<br/><br/>
+
+              Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in  <a href="" class="hover:underline"><span class="font-bold">our privacy policy</span></a>.</p>
+          </div>
+
+          <div class="col-md-12">
+            <a class="btn text-white loginButton">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-
 
 
 
@@ -188,6 +208,7 @@
   <!-- Start Your Code Here -->
 
   <!-- Dont Delete or Edit start  -->
+
   <footer id="footerSection" class="mt-4 pt-4 pb-3">
 
     <div class="container">
@@ -294,6 +315,10 @@
     </div>
 
   </footer>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -302,10 +327,13 @@
   <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
   <script src="./../script.js"></script>
   <script src="./../food_cart.js"></script>
-
-  <script>
-  </script>
   <!-- Dont Delete or Edit End  -->
 </body>
+<style>
+  .form-check-input:checked{
+   background-color: red !important;
+   border: 1px solid red;
+}
+</style>
 
 </html>
