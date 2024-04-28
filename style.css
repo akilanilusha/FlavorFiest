@@ -79,7 +79,7 @@ a:focus {
 }
 
 .cart:hover {
-    background-color: #9f1919;
+    /* background-color: #9f1919; */
     /* Changing background color on hover */
 }
 
@@ -485,5 +485,212 @@ ul {
         margin-top: 0;
     }
        
+
+}
+.mainCart{
+    height: 45px;
+    background: white;
+    border: 2px solid #ff0000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: ; */
+}
+
+.cartCount{
+    background: #000000;
+    border-radius: 50px;
+
+}
+.foodCartTxt{
+    color:#000000;
+    font-size: 18px;
+}
+
+.tblcol-1 {
+    width: 1%;
+}
+
+.tblcol-2 {
+    width: 2%;
+}
+
+.tblcol-3 {
+    width: 3%;
+}
+
+.tblcol-4 {
+    width: 4%;
+}
+
+.tblcol-5 {
+    width: 5%;
+}
+
+.tblcol-6 {
+    width: 6%;
+}
+
+.tblcol-7 {
+    width: 7%;
+}
+
+.tblcol-8 {
+    width: 8%;
+}
+
+.tblcol-9 {
+    width: 9%;
+}
+
+.tblcol-10 {
+    width: 10%;
+}
+
+.tblcol-11 {
+    width: 11%;
+}
+
+.tblcol-12 {
+    width: 12%;
+}
+
+.tblcol-13 {
+    width: 13%;
+}
+
+.tblcol-14 {
+    width: 14%;
+}
+
+.tblcol-15 {
+    width: 15%;
+}
+
+.tblcol-16 {
+    width: 16%;
+}
+
+.tblcol-17 {
+    width: 17%;
+}
+
+.tblcol-18 {
+    width: 18%;
+}
+
+.tblcol-19 {
+    width: 19%;
+}
+
+.tblcol-20 {
+    width: 20%;
+}
+
+.tblcol-21 {
+    width: 21%;
+}
+
+.tblcol-22 {
+    width: 22%;
+}
+
+.tblcol-23 {
+    width: 23%;
+}
+
+.tblcol-24 {
+    width: 24%;
+}
+
+.tblcol-25 {
+    width: 25%;
+}
+
+.tblcol-26 {
+    width: 26%;
+}
+
+.tblcol-27 {
+    width: 27%;
+}
+
+.tblcol-28 {
+    width: 28%;
+}
+
+.tblcol-29 {
+    width: 29%;
+}
+
+.tblcol-30 {
+    width: 30%;
+}
+
+.tblcol-31 {
+    width: 31%;
+}
+
+.tblcol-32 {
+    width: 32%;
+}
+
+.tblcol-33 {
+    width: 33%;
+}
+
+.tblcol-34 {
+    width: 34%;
+}
+
+.tblcol-35 {
+    width: 35%;
+}
+
+.tblcol-36 {
+    width: 36%;
+}
+
+.tblcol-37 {
+    width: 37%;
+}
+
+.tblcol-38 {
+    width: 38%;
+}
+
+.tblcol-39 {
+    width: 39%;
+}
+
+.tblcol-50 {
+    width: 50%;
+}
+
+.CoupanDiv{
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 0 50px 50px 0px;
+    color: white;
+}
+
+.InputCupunBoorder{
+    border: 2px solid cfc8c8;
+}
+.cart_main_div{
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .cart_main_div {
+        padding-top: 20px;
+        margin: 0 !important;
+    }
+    
+    .bg-cart footer{
+        margin: 0 !important;
+    }
 
 }
