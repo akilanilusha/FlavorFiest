@@ -236,8 +236,16 @@ function displayCart() {
                             <input type="number" class="form-control form-control count_of_item" value="${item.inCart}" min="1" max="100" data-tag="${item.tag}">
                         </div>
                     </td>
-                    <td class="font-bold text-center">Rs ${subtotal.toFixed(2)}</td>
-                    <td class="text-center"><button class="btn btn-sm btn-danger delete-item" data-tag="${item.tag}">Delete</button></td>
+                    <td class="font-bold text-center">Rs ${subtotal.toFixed(2)}
+                        <div class="add-button-container">
+                            <button class="btn btn-sm  delete-item " data-tag="${item.tag}"> <img src="./../assets/img/icons8-close-32.png"</button>
+                         </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="remove-button-container">
+                            <button class="btn btn-sm btn-danger delete-item " data-tag="${item.tag}">Delete</button>
+                        </div>
+                    </td>
                 </tr>
             `;
             cartCount++;

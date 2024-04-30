@@ -705,3 +705,17 @@ ul {
     border-radius: 50%; 
     font-size: 12px; 
 }
+
+@media only screen and (max-width: 600px) {
+    .remove-button-container {
+        display: none; 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .add-button-container {
+        display: none; 
+    }
+}
+
+
