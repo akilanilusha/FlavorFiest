@@ -143,7 +143,7 @@ for(let i=0; i< carts.length;i++){
 function onLoadCartNumber(){
     let productNumbers = localStorage.getItem('cartNumbers');
     document.querySelector('.cart span').textContent = productNumbers;
-
+    document.querySelector('.small-cart-value span').textContent = productNumbers;
 }
 
 function cartNumbers(products){
@@ -154,10 +154,14 @@ function cartNumbers(products){
     if(productNumbers){
         localStorage.setItem('cartNumbers',productNumbers + 1);
         document.querySelector('.cart span').textContent = 1 + productNumbers;
+        document.querySelector('.small-cart-value span').textContent = 1 + productNumbers;
+
     }
     else{
         localStorage.setItem('cartNumbers',1);
         document.querySelector('.cart span').textContent = 1;
+        document.querySelector('.small-cart-value span').textContent = 1;
+
     }
     setItems(products);
     }
@@ -320,6 +324,8 @@ function deleteItem(tag) {
         localStorage.setItem('cartNumbers', productNumbers);
         localStorage.setItem('productsInCart', JSON.stringify(cartItems));
         document.querySelector('.cart span').textContent = productNumbers;
+        document.querySelector('.small-cart-value span').textContent = productNumbers;
+
 
         displayCart(); // Refresh cart display after deletion
     }
