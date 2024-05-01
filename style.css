@@ -694,3 +694,28 @@ ul {
     }
 
 }
+
+.small-cart-value {
+    position: absolute;
+    bottom: 40px; /* Adjust vertical position */
+    right: -5px; /* Adjust horizontal position */
+    background-color: rgb(210, 3, 3); 
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 50%; 
+    font-size: 12px; 
+}
+
+@media only screen and (max-width: 600px) {
+    .remove-button-container {
+        display: none; 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .add-button-container {
+        display: none; 
+    }
+}
+
+
