@@ -132,8 +132,8 @@
       <div class="col-12">
         <!-- <button onclick="PlaceOrder();">email</button> -->
         <div class="table-responsive">
-          <table class="table table-striped" width="100%">
-            <thead>
+          <table class="table table-striped itemTable" width="100%">
+            <thead >
               <tr>
                 <th class="tblcol-5"></th>
                 <th class="tblcol-50">PRODUCT</th>
@@ -457,10 +457,12 @@
 
     function CheckFillDetails() {
       const PayForm = document.forms['PayDetailForm'];
-      let f_name = PayForm['f_name'].value;
+      var f_name = PayForm['f_name'].value;
       let l_name = PayForm['l_name'].value;
       let phone = PayForm['phone'].value;
       let email_cart = PayForm['email_cart'].value;
+
+      
 
       if (!f_name || !l_name || !phone || !email_cart) {
         alert("Please Fill all Details");
@@ -480,11 +482,14 @@
     //     });
     //   return false; // Uncomment this line if you want to prevent default action
     // }
-    function PlaceOrder() {
-      var url="https://akilanilusha.github.io/FlavorFiest/"
+    function PlaceOrder(formData) {
+
+      alert(f_name);
+      var url="http://localhost/project/FlavorFiest/"
       $.ajax({
         method: "POST",
-        url: url + "mail.php"
+        url: url + "mail.php",
+        data : formData,
       })
         .done(function (response) {
           $("p.broken").html(response);
