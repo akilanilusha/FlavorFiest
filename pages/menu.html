@@ -122,8 +122,8 @@
     <a href="./add_cart.html">
       <div class="cartbackground">
         <i class="fa fa-shopping-bag"></i>
-
       </div>
+      <div class="small-cart-value"> <span> 0 </span></div>
     </a>
   </div>
   <!-- cart icon for small devices -->
@@ -161,7 +161,7 @@
         </div>
        
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9 sticky" >
         <!-- Appetizers -->
         <section id="Appetizers" >
           <fieldset class="creason__info">
@@ -182,7 +182,7 @@
                         </p>
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,030.00</p>
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3 add-cart" onclick="getItemData(0)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3 add-cart" onclick="getItemData(0)" data-te-toggle="modal"
                             data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                             ADD TO CART</a>
                         </div>
@@ -201,7 +201,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 600.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3 add-cart" onclick="getItemData(1)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3 add-cart" onclick="getItemData(1)" data-te-toggle="modal"
                             data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                             ADD TO CART</a>
                         </div>
@@ -219,7 +219,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 600.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3 add-cart" onclick="getItemData(2)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3 add-cart" onclick="getItemData(2)" data-te-toggle="modal"
                             data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                             ADD TO CART</a>
                         </div>
@@ -239,7 +239,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,600.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3 add-cart" onclick="getItemData(3)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3 add-cart" onclick="getItemData(3)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -257,7 +257,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 850.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3 add-cart" onclick="getItemData(4)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3 add-cart" onclick="getItemData(4)" data-te-toggle="modal"
                             data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                             ADD TO CART</a>
                         </div>
@@ -274,8 +274,8 @@
                         <p class="card-text text-[14px] font-thin mt-3">Succulent chicken wings tossed in our famous BBQ sauce & baked to perfection</p>
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,170.00</p>
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3 add-cart" onclick="getItemData(5)" data-te-toggle="modal"
-                            data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
+                          <a class="btn btn-success  mt-3 add-cart" onclick="return getItemData(5)"
+                             >
                             ADD TO CART</a>
                         </div>
                       </div>
@@ -312,7 +312,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 900.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(8)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(8)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>                        </div>
                       </div>
@@ -329,7 +329,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,600.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(9)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(9)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -347,7 +347,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,900.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(10)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(10)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -366,7 +366,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,800.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(11)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(11)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -407,7 +407,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 6,500.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(1)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(1)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -426,7 +426,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,430.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(2)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(2)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -445,7 +445,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 1,700.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(3)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(3)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -485,7 +485,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 6,500.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(18)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(18)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -504,7 +504,7 @@
                         <p class="text-center mt-1 text-20 font-semibold"> RS.7,750.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(21)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(21)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>
@@ -523,7 +523,7 @@
                         <p class="text-center mt-1 text-20 font-semibold">Rs. 6,500.00</p>
   
                         <div class="row p-2">
-                          <a href="#" class="btn btn-success  mt-3  add-cart" onclick="getItemData(23)" data-te-toggle="modal"
+                          <a class="btn btn-success  mt-3  add-cart" onclick="getItemData(23)" data-te-toggle="modal"
                           data-te-target="#exampleModalCenter" data-te-ripple-init data-te-ripple-color="light">
                           ADD TO CART</a>
                         </div>

@@ -693,6 +693,33 @@ ul {
         margin: 0 !important;
     }
 
+    .small-cart-value {
+        position: absolute;
+        bottom: 40px; /* Adjust vertical position */
+        right: -5px; /* Adjust horizontal position */
+        background-color: rgb(210, 3, 3); 
+        color: white;
+        padding: 5px 10px; 
+        border-radius: 50%; 
+        font-size: 12px; 
+    }
+
+    .itemTable{
+        font-size: 12px;
+    }
+
+    .remove-button-container {
+        display: none; 
+    }
+
+ 
+
+}
+
+@media only screen and (min-width: 600px) {
+    .add-button-container {
+        display: none; 
+    }
 }
 
 .checkoutButton{

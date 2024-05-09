@@ -19,7 +19,7 @@ try {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'flavorfiestmatara@gmail.com';
-    $mail->Password = 'miniproject';
+    $mail->Password = 'sbkt dywb umwc lupc';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
     $mail->setFrom('flavorfiestmatara@gmail.com', 'Reset Password');
