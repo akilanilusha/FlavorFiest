@@ -122,15 +122,15 @@
     <a href="./add_cart.html">
       <div class="cartbackground">
         <i class="fa fa-shopping-bag"></i>
-
       </div>
+      <div class="small-cart-value"> <span> 0 </span></div>
     </a>
   </div>
   <!-- cart icon for small devices -->
   <div class="container bg-white cart_main_div">
     <div class="row mx-auto">
       <div class="col-12">
-        <button onclick="PlaceOrder();">email</button>
+        <!-- <button onclick="PlaceOrder();">email</button> -->
         <div class="table-responsive">
           <table class="table table-striped" width="100%">
             <thead>
@@ -188,7 +188,7 @@
     style="z-index: 12345555;">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <form action="" name="PayDetailForm" method="post" onsubmit="return PlaceOrer();">
+        <form action="" name="PayDetailForm" method="post" onsubmit="return PlaceOrder();">
           <div class="modal-header bg-dark text-white">
             <h3 class="modal-title uppercase font-semibold " id="exampleModalLabel" style="font-size: 25px;">Add
               Delivery
@@ -481,9 +481,10 @@
     //   return false; // Uncomment this line if you want to prevent default action
     // }
     function PlaceOrder() {
+      var url="https://akilanilusha.github.io/FlavorFiest/"
       $.ajax({
-        method: "GET",
-        url: "http://localhost/project/FlavorFiest/mail.php"
+        method: "POST",
+        url: url + "mail.php"
       })
         .done(function (response) {
           $("p.broken").html(response);
@@ -491,7 +492,7 @@
         .fail(function (jqXHR, textStatus, errorThrown) {
           console.error("AJAX error:", textStatus, errorThrown);
         });
-      // return false; // Uncomment this line if you want to prevent default action
+      return false; // Uncomment this line if you want to prevent default action
     }
 
 
