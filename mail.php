@@ -1,8 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: *");
 
-// print("mail");
-// die;
+print("mail");
+die;
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -20,17 +19,16 @@ try {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'flavorfiestmatara@gmail.com';
-    $mail->Password = 'sbkt dywb umwc lupc';
+    $mail->Password = 'miniproject';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
-    $mail->setFrom('flavorfiestmatara@gmail.com', 'Flavour Fiest');
-    $mail->addReplyTo('flavorfiestmatara@gmail.com', 'Flavour Fiest');
+    $mail->setFrom('flavorfiestmatara@gmail.com', 'Reset Password');
+    $mail->addReplyTo('flavorfiestmatara@gmail.com', 'Reset Password');
     $mail->addAddress($email);
     $mail->isHTML(true);
-    $mail->Subject = 'Flavour Fiest Billing Details';
-    $bodyContent = '<h1 style="color:green">Order Karanam Kapan Den</h1>';
+    $mail->Subject = 'eShop Forgot Password Verification Code';
+    $bodyContent = '<h1 style="color:green">Your Verification code is ' . $code . '</h1>';
     $mail->Body    = $bodyContent;
-    $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

@@ -122,8 +122,8 @@
     <a href="./add_cart.html">
       <div class="cartbackground">
         <i class="fa fa-shopping-bag"></i>
+
       </div>
-      <div class="small-cart-value"> <span> 0 </span></div>
     </a>
   </div>
   <!-- cart icon for small devices -->
@@ -482,7 +482,7 @@
     // }
     function PlaceOrder() {
       $.ajax({
-        method: "POST",
+        method: "GET",
         url: "http://localhost/project/FlavorFiest/mail.php"
       })
         .done(function (response) {
@@ -491,7 +491,7 @@
         .fail(function (jqXHR, textStatus, errorThrown) {
           console.error("AJAX error:", textStatus, errorThrown);
         });
-      return false; // Uncomment this line if you want to prevent default action
+      // return false; // Uncomment this line if you want to prevent default action
     }
 
 

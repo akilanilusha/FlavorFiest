@@ -143,7 +143,7 @@ for(let i=0; i< carts.length;i++){
 function onLoadCartNumber(){
     let productNumbers = localStorage.getItem('cartNumbers');
     document.querySelector('.cart span').textContent = productNumbers;
-    document.querySelector('.small-cart-value span').textContent = productNumbers;
+
 }
 
 function cartNumbers(products){
@@ -154,14 +154,10 @@ function cartNumbers(products){
     if(productNumbers){
         localStorage.setItem('cartNumbers',productNumbers + 1);
         document.querySelector('.cart span').textContent = 1 + productNumbers;
-        document.querySelector('.small-cart-value span').textContent = 1 + productNumbers;
-
     }
     else{
         localStorage.setItem('cartNumbers',1);
         document.querySelector('.cart span').textContent = 1;
-        document.querySelector('.small-cart-value span').textContent = 1;
-
     }
     setItems(products);
     }
@@ -236,16 +232,8 @@ function displayCart() {
                             <input type="number" class="form-control form-control count_of_item" value="${item.inCart}" min="1" max="100" data-tag="${item.tag}">
                         </div>
                     </td>
-                    <td class="font-bold text-center">Rs ${subtotal.toFixed(2)}
-                        <div class="add-button-container">
-                            <button class="btn btn-sm  delete-item " data-tag="${item.tag}"> <img src="./../assets/img/icons8-close-32.png"</button>
-                         </div>
-                    </td>
-                    <td class="text-center">
-                        <div class="remove-button-container">
-                            <button class="btn btn-sm btn-danger delete-item " data-tag="${item.tag}">Delete</button>
-                        </div>
-                    </td>
+                    <td class="font-bold text-center">Rs ${subtotal.toFixed(2)}</td>
+                    <td class="text-center"><button class="btn btn-sm btn-danger delete-item" data-tag="${item.tag}">Delete</button></td>
                 </tr>
             `;
             cartCount++;
@@ -332,8 +320,6 @@ function deleteItem(tag) {
         localStorage.setItem('cartNumbers', productNumbers);
         localStorage.setItem('productsInCart', JSON.stringify(cartItems));
         document.querySelector('.cart span').textContent = productNumbers;
-        document.querySelector('.small-cart-value span').textContent = productNumbers;
-
 
         displayCart(); // Refresh cart display after deletion
     }
