@@ -695,12 +695,3 @@ ul {
 
 }
 
-.checkoutButton{
-    border-radius: 50px;
-    background: #ff0000;
-    color: white;
-}
-.checkoutButton:focus{
-    outline: 0;
-    box-shadow: none;
-}
