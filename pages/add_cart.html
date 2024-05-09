@@ -10,6 +10,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
   <title>Flavor Fiest | Menu</title>
   <link rel="stylesheet" href="../style.css">
 
@@ -127,6 +130,7 @@
   <div class="container bg-white cart_main_div">
     <div class="row mx-auto">
       <div class="col-12">
+        <button onclick="PlaceOrder();">email</button>
         <div class="table-responsive">
           <table class="table table-striped" width="100%">
             <thead>
@@ -134,7 +138,7 @@
                 <th class="tblcol-5"></th>
                 <th class="tblcol-50">PRODUCT</th>
                 <th class="tblcol-11 text-center">PRICE</th>
-                <th class="tblcol-6 text-center">QUNTITY</th>
+                <th class="tblcol-6 text-center">QUANTITY</th>
                 <th class="tblcol-13 text-center">SUBTOTAL</th>
                 <th class="tblcol-15 text-center"></th>
               </tr>
@@ -172,15 +176,148 @@
             <p class="text-20 font-bold p-3 ">Rs <span id="totalcost" class="totalcost"></span></p>
           </div>
         </div>
-        <div class="row flex  mt-3">
-          <a href="" class="btn bg-[#ff0000] text-white rounded-full p-2" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">CHECK OUT</a>
+        <div class="row flex  mt-3 m-2">
+          <a href="" class="btn checkoutButton p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">CHECK OUT</a>
         </div>
       </div>
 
     </div>
   </div>
 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="z-index: 12345555;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <form action="" name="PayDetailForm" method="post" onsubmit="return PlaceOrer();">
+          <div class="modal-header bg-dark text-white">
+            <h3 class="modal-title uppercase font-semibold " id="exampleModalLabel" style="font-size: 25px;">Add
+              Delivery
+              Details</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-5">
+
+
+            <div class="col-md-12 mb-5">
+              <div class="font-medium">
+                <h4 class="mb-3 font-semibold ">Delivery Type</h3>
+                  <input class="form-check-input " type="radio" name="d_type" id="pickUpRadio" value="pickUpRadio"
+                    checked>
+                  <label class="form-check-label  mr-4" for="pickUpRadio">
+                    PICKUP AT HOTEL
+                  </label>
+                  <input class="form-check-input" type="radio" name="d_type" id="deliveryRadio" value="deliveryRadio">
+                  <label class="form-check-label" for="deliveryRadio">
+                    DELIVERY TO AN ADDRESS
+                  </label>
+              </div>
+            </div>
+            <div class="col-md-12 mt-3">
+              <h4 class="mt-2 mb-3 font-semibold ">Billing Details</h4>
+              <div class="row">
+
+                <div class="col-md-6 mb-3">
+                  <div class="form-group">
+                    <label for="f_name">First Name <span style="color:red;">*</span></label>
+                    <input type="text" class="form-control" id="f_name" aria-describedby="f_name" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-group">
+                    <label for="l_name">Last Name <span style="color:red;">*</span></label>
+                    <input type="text" class="form-control" id="l_name" aria-describedby="l_name">
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <div class="form-group">
+                    <label for="phone">Phone<span style="color:red;">*</span></label>
+                    <input type="text" class="form-control" id="phone" aria-describedby="phone">
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <div class="form-group">
+                    <label for="email_cart">Email Address<span style="color:red;">*</span></label>
+                    <input type="email" class="form-control" id="email_cart" aria-describedby="email_cart">
+                  </div>
+                </div>
+                <div id="Deliveryaddress" style="display: none;">
+                  <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                      <label for="address_st">Street Address<span style="color:red;">*</span></label>
+                      <input type="text" class="form-control mb-3" id="address_st" aria-describedby="address_st">
+                      <input type="text" class="form-control" id="address_st" aria-describedby="address_st">
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                      <label for="address_st">Town/City<span style="color:red;">*</span></label>
+                      <input type="text" class="form-control mb-3" id="address_st" aria-describedby="address_st">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mb-3">
+
+                  <label for="deliveryNote">DELIVERY NOTE (OPTIONAL)</label>
+
+                </div>
+                <div class="col-12 mb-3">
+                  <textarea name="" id="" cols="" rows="6" style="border: 1px solid black; width: 100%;"></textarea>
+
+                </div>
+
+                <div id="paydetails" style="display: none;" class="mt-3">
+                  <div class="col-md-12">
+                    <h4 class="mt-2 mb-3 font-semibold text-[20px] ">Payment Details</h4>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                      <label for="pay_card_number">Card Number<span style="color:red;">*</span></label>
+                      <input type="text" class="form-control mb-3" id="pay_card_number" aria-describedby="address_st">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <div class="form-group">
+                        <label for="payExpDate">Expire Date<span style="color:red;">*</span></label>
+                        <input type="text" class="form-control mb-3" id="payExpDate" aria-describedby="payExpDate"
+                          placeholder="MM/YY">
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="form-group">
+                        <label for="s_num">Serial Number<span style="color:red;">*</span></label>
+                        <input type="text" class="form-control mb-3" id="s_num" aria-describedby="address_st"
+                          placeholder="123">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="c_holder_name">Card Holder Name<span style="color:red;">*</span></label>
+                      <input type="c_holder_name" class="form-control mb-3" id="c_holder_name"
+                        aria-describedby="c_holder_name" placeholder="Jhone Riched">
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger text-white" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="paydetailsBtn" class="btn btn-success text-white "
+              onclick=" CheckFillDetails()">Place Order</button>
+            <button type="submit" id="pay" class="btn btn-success text-white " style="display: none;">Pay</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <footer id="footerSection" class="mt-4 pt-4 pb-3">
 
@@ -299,25 +436,65 @@
 
   <script>
     $(document).ready(function () {
-      $('#exampleModal').on('shown.bs.modal', function () {
-        $('#pickUpRadio').click(function () {
-          if ($(this).is(':checked')) {
-            document.getElementById("delivery_data").style.display = "none";
-          }
-        });
-        $('#deliveryRadio').click(function () {
-          if ($(this).is(':checked')) {
-            document.getElementById("delivery_data").style.display = "block";
-          }
-        });
+      $('[name="d_type"]').click(function () {
+        if (this.value == "pickUpRadio") {
+          document.getElementById("Deliveryaddress").style.display = "none";
+        }
+        if (this.value == "deliveryRadio") {
+          document.getElementById("Deliveryaddress").style.display = "block";
+        }
       });
+
     });
 
-    function viewPay() {
-      document.getElementById('paydetails').style.display = "block"
 
-      document.getElementById('pay').innerHTML = 'pay'
+    function viewPay() {
+
+      document.getElementById('paydetails').style.display = "block"
+      document.getElementById('pay').style.display = "block"
+      document.getElementById('paydetailsBtn').style.display = "none"
     }
+
+    function CheckFillDetails() {
+      const PayForm = document.forms['PayDetailForm'];
+      let f_name = PayForm['f_name'].value;
+      let l_name = PayForm['l_name'].value;
+      let phone = PayForm['phone'].value;
+      let email_cart = PayForm['email_cart'].value;
+
+      if (!f_name || !l_name || !phone || !email_cart) {
+        alert("Please Fill all Details");
+
+      } else {
+        viewPay();
+      }
+    }
+
+    // function PlaceOrder() {
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "../mail.php"
+    //   })
+    //     .done(function (response) {
+    //       $("p.broken").html(response);
+    //     });
+    //   return false; // Uncomment this line if you want to prevent default action
+    // }
+    function PlaceOrder() {
+      $.ajax({
+        method: "POST",
+        url: "http://localhost/project/FlavorFiest/mail.php"
+      })
+        .done(function (response) {
+          $("p.broken").html(response);
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          console.error("AJAX error:", textStatus, errorThrown);
+        });
+      return false; // Uncomment this line if you want to prevent default action
+    }
+
+
   </script>
 
 </body>
