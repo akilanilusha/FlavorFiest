@@ -229,9 +229,17 @@ a:focus {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(assets/img/home_page/offer_image.jpg);
+    /* background-image: url(assets/img/home_page/offer_image.jpg); */
 
 }
+
+.offer-div .carousel-div {
+    width: 100%;
+    /* Set the height */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
 
 @media only screen and (max-width: 600px) {
 
@@ -449,7 +457,7 @@ ul {
 
 .sign_content {
     background-color: white;
-    padding: 30px;
+    /* padding: 30px; */
     margin-top: 80px;
     border-radius: 10px;
 }
@@ -473,6 +481,10 @@ ul {
 .loginButton {
     background: #ff0000;
     width: 300px;
+    height: 60px;
+    margin: 20px;
+    font-size: 30px;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -730,4 +742,23 @@ ul {
 .checkoutButton:focus{
     outline: 0;
     box-shadow: none;
+}
+
+.feedback .body{
+    background-color:#eee;
+}
+
+.feedback .card{
+    
+    border:none;
+}
+
+.feedback .user-content p{
+    margin-top:5px;
+    font-size:12px;
+}
+
+
+.feedback .ratings i{
+    color:#ff0000;
 }

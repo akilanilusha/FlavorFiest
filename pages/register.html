@@ -127,18 +127,13 @@
   </div>
   <!-- Start Your Code Here  -->
 
-  <div class="container sign_content col-6">
+  <div class="container sign_content  col-xs-12 col-md-8">
 
     <div class="row text-center">
-      <h1 class="text-60">My Account</h1>
+      <h1 style="font-size:40px">Create Account</h1>
       <hr>
     </div>
-    <div class="row d-flex mx-auto justify-content-center">
-      <a href="./login.html" class="btn loginButton text-white ">Login</a>
 
-      <a href="./register.html" class="btn loginButton text-white ">Register</a>
-
-    </div>
 
     <!-- login -->
     <!-- <div class="col-md-6 pe-5">
@@ -182,11 +177,24 @@
       </div> -->
 
     <!-- register -->
-    <!-- <div class="col-md-6">
+    <section id="register">
+      <div class="col-md-8 col-xs-12 mx-auto d-flex justify-content-center">
         <div class="row">
-          <div class="col-md-12 mt-4 mb-3">
-            <h3 class="text-30 font-semibold">Register</h3>
+
+          <div class="col-md-6">
+            <div class="form-group mb-4">
+              <label for="email" class="font-medium mb-2">First Name<span class="text-red-700">*</span></label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Eg:Akila">
+            </div>
           </div>
+
+          <div class="col-md-6">
+            <div class="form-group mb-4">
+              <label for="email" class="font-medium mb-2">Last Name<span class="text-red-700">*</span></label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Eg: Nilusha">
+            </div>
+          </div>
+
           <div class="col-md-12">
             <div class="form-group mb-4">
               <label for="email" class="font-medium mb-2">Email address<span class="text-red-700">*</span></label>
@@ -194,17 +202,30 @@
             </div>
           </div>
 
-          <div class="col-md-12  mb-4">
-            <p>A link to set a new password will be sent to your email address.<br/><br/>
-
-              Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in  <a href="" class="hover:underline"><span class="font-bold">our privacy policy</span></a>.</p>
+          <div class="col-md-12">
+            <div class="form-group mb-4">
+              <label for="text" class="font-medium mb-2">Phone Number<span class="text-red-700">*</span></label>
+              <input type="text" class="form-control" id="phone" aria-describedby="phone" pattern="[0-9]{10}" placeholder="Enter Phone Number">
+            </div>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12  mb-4">
+            <p>A link to set a new password will be sent to your email address.<br /><br />
+
+              Your personal data will be used to support your experience throughout this website, to manage access to
+              your
+              account, and for other purposes described in <a href="" class="hover:underline"><span
+                  class="font-bold">our
+                  privacy policy</span></a>.</p>
+          </div>
+
+          <div class="col-md-12 d-flex justify-content-center">
             <a class="btn text-white loginButton">Register</a>
           </div>
         </div>
-      </div> -->
+      </div>
+    </section>
+
   </div>
 
   </div>
