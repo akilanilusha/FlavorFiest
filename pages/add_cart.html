@@ -133,7 +133,7 @@
         <!-- <button onclick="PlaceOrder();">email</button> -->
         <div class="table-responsive">
           <table class="table table-striped itemTable" width="100%">
-            <thead >
+            <thead>
               <tr>
                 <th class="tblcol-5"></th>
                 <th class="tblcol-50">PRODUCT</th>
@@ -319,6 +319,9 @@
     </div>
   </div>
 
+
+  
+
   <footer id="footerSection" class="mt-4 pt-4 pb-3">
 
     <div class="container">
@@ -462,7 +465,7 @@
       let phone = PayForm['phone'].value;
       let email_cart = PayForm['email_cart'].value;
 
-      
+
 
       if (!f_name || !l_name || !phone || !email_cart) {
         alert("Please Fill all Details");
@@ -483,22 +486,43 @@
     //   return false; // Uncomment this line if you want to prevent default action
     // }
     function PlaceOrder(formData) {
+  var url = "http://localhost/project/FlavorFiest/";
+  
+  $.ajax({
+    method: "POST",
+    url: url + "mail.php",
+    data: formData,
+    success: function (response) {
+      console.log("Request succeeded!");
+      console.log(response); 
 
-      alert(f_name);
-      var url="http://localhost/project/FlavorFiest/"
-      $.ajax({
-        method: "POST",
-        url: url + "mail.php",
-        data : formData,
-      })
-        .done(function (response) {
-          $("p.broken").html(response);
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-          console.error("AJAX error:", textStatus, errorThrown);
-        });
-      return false; // Uncomment this line if you want to prevent default action
+      showAlert("Order placed successfully!");
+      
+      $('#exampleModal').modal('hide');
+ 
+    },
+    //If any error in Php request error load this 
+    error: function (xhr, status, error) {
+      console.log("Request failed!");
+      console.log("Status: " + status);
+      console.log("Error: " + error);
+      
+      $('#exampleModal').modal('hide'); 
+      showAlert();
     }
+    
+  });
+  return false;
+}
+
+function errorModel() {
+  // Code to close the modal
+}
+
+function showAlert(message) {
+  alert(message);
+}
+
 
 
   </script>
