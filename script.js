@@ -144,7 +144,9 @@ class items {
   function onLoadCartNumber(){
       let productNumbers = localStorage.getItem('cartNumbers');
       document.querySelector('.cart span').textContent = productNumbers;
-      document.querySelector('.small-cart-value span').textContent = productNumbers;
+      console.log(productNumbers);
+      productNumbers == null ? document.querySelector('.cart span').textContent = 0 : document.querySelector('.cart span').textContent = productNumbers;
+      productNumbers==null?document.querySelector('.small-cart-value span').textContent = 0: document.querySelector('.small-cart-value span').textContent = productNumbers;
   }
   
   function cartNumbers(products){
