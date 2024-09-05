@@ -197,8 +197,6 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-5">
-
-
             <div class="col-md-12 mb-5">
               <div class="font-medium">
                 <h4 class="mb-3 font-semibold ">Delivery Type</h3>
@@ -270,9 +268,8 @@
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
                       <label for="pay_card_number">Card Number<span style="color:red;">*</span></label>
-                      <input type="text" class="form-control mb-3" id="pay_card_number" aria-describedby="address_st" 
-                             pattern="\d{16}" 
-                             title="Please enter a valid 16-digit card number">
+                      <input type="text" class="form-control mb-3" id="pay_card_number" aria-describedby="address_st"
+                        pattern="\d{16}" maxlength="16" title="Please enter a valid 16-digit card number">
                     </div>
                   </div>
                   <div class="row">
@@ -280,9 +277,8 @@
                       <div class="form-group">
                         <label for="payExpDate">Expire Date<span style="color:red;">*</span></label>
                         <input type="text" class="form-control mb-3" id="payExpDate" aria-describedby="payExpDate"
-                               placeholder="MM/YY"
-                               pattern="(0[1-9]|1[0-2])\/?([0-9]{2})"
-                               title="Please enter a valid expiration date in MM/YY format">
+                          placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})"
+                          title="Please enter a valid expiration date in MM/YY format">
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -320,9 +316,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <footer id="footerSection" class="mt-4 pt-4 pb-3">
 
@@ -477,18 +470,31 @@
       }
     }
 
-    // function PlaceOrder() {
-    //   $.ajax({
-    //     method: "POST",
-    //     url: "../mail.php"
-    //   })
-    //     .done(function (response) {
-    //       $("p.broken").html(response);
-    //     });
-    //   return false; // Uncomment this line if you want to prevent default action
-    // }
-    function PlaceOrder(formData) {
+    function clearStoreage(){
+      localStorage.clear();
+      location.reload()
+    }
+
+    function PlaceOrder() {
       var url = "http://localhost/project/FlavorFiest/";
+
+      const PayForm = document.forms['PayDetailForm'];
+      var f_name = PayForm['f_name'].value;
+      let l_name = PayForm['l_name'].value;
+      let phone = PayForm['phone'].value;
+      let email_cart = PayForm['email_cart'].value;
+
+      var totalCost = document.getElementById('totalcost').textContent;
+
+      var formData = {
+        total_amount: totalCost,
+        f_name: f_name,
+        l_name: l_name,
+        phone: phone,
+        email_cart: email_cart,
+      };
+
+      console.log(formData);
 
       $.ajax({
         method: "POST",
@@ -499,6 +505,7 @@
           console.log(response);
 
           showAlert("Order placed successfully!");
+          
 
           $('#exampleModal').modal('hide');
 
@@ -514,6 +521,9 @@
         }
 
       });
+
+      clearStoreage();
+
       return false;
     }
 
