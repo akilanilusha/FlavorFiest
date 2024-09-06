@@ -477,7 +477,7 @@
 
     function PlaceOrder() {
       //var url = "http://localhost/project/FlavorFiest/";
-      var url = "flavour-fiest.free.nf/mail.php";
+      var url = "http://flavour-fiest.free.nf/";
       const PayForm = document.forms['PayDetailForm'];
       var f_name = PayForm['f_name'].value;
       let l_name = PayForm['l_name'].value;
@@ -498,7 +498,7 @@
 
       $.ajax({
         method: "POST",
-        url:"mail.php",
+        url:url + "mail.php",
         data: formData,
         success: function (response) {
           console.log("Request succeeded!");
