@@ -132,14 +132,38 @@ let products = [
 
 ]
 
-for(let i=0; i< carts.length;i++){
+/* for(let i=0; i< carts.length;i++){
     carts[i].addEventListener('click',() =>{
         cartNumbers(products[i]);
         totalCost(products[i])
       
     })
+} */
 
+function findProduct(productName) {
+    return products.find(item=>item.name.trim().toLowerCase()===productName.trim().toLowerCase());
 }
+    
+carts.forEach(btn => {
+    btn.addEventListener('click', e => {
+
+        const card = e.target.closest('.card');
+        const cardTitleElement = card.querySelector('.card-title');
+
+            if (cardTitleElement) {
+                const productName = cardTitleElement.textContent;
+                const product = findProduct(productName);
+                console.log(productName);
+                
+                if(product){
+                    cartNumbers(product);
+                    totalCost(product);
+                }
+            }
+    });
+});
+
+
 function onLoadCartNumber(){
     let productNumbers = localStorage.getItem('cartNumbers');
     document.querySelector('.cart span').textContent = productNumbers;
