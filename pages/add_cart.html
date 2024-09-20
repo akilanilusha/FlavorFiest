@@ -514,11 +514,12 @@
 
     function clearStoreage() {
       localStorage.clear();
-      location.reload()
+      setTimeout(function () {
+        location.reload();
+      }, 3000); 
     }
 
     function PlaceOrder() {
-
       const PayForm = document.forms['PayDetailForm'];
       var f_name = PayForm['f_name'].value;
       let l_name = PayForm['l_name'].value;
@@ -553,23 +554,26 @@
 
           var successModal = new bootstrap.Modal(document.getElementById('success_tic'));
           successModal.show();
+
+       
+          setTimeout(function () {
+            clearStoreage(); 
+          }, 2000);  
+
         },
         error: function (xhr, status, error) {
-
-          // alert("Can't Place Order. Please Wait And Try Again");
-
           console.log("Request failed!");
           console.log("Status: " + status);
           console.log("Error: " + error);
-          // $('#waitingModal').modal('hide');
-          $('#waitingModal').modal('hide');
-        }
 
+          $('#waitingModal').modal('hide');
+          clearStoreage();
+        }
       });
-      showAlert();
 
       return false;
     }
+
 
     function errorModel() {
     }
