@@ -1,3 +1,4 @@
+var projectUrl = "http://localhost/project/FlavorFiest/";
 
 
 class items {
