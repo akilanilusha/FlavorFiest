@@ -1,3 +1,4 @@
+var projectUrl = "http://localhost/project/FlavorFiest/";
 
 
 class items {
@@ -12,7 +13,7 @@ class items {
   
   
   function getItemData(id) {
-    openModel(id);
+    // openModel(id);
   
   }
   
