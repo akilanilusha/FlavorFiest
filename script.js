@@ -12,7 +12,7 @@ class items {
   
   
   function getItemData(id) {
-    openModel(id);
+    // openModel(id);
   
   }
   
