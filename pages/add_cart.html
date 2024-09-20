@@ -512,8 +512,8 @@
       }
     }
 
-    function clearStoreage() {
-      localStorage.clear();
+    function clearStoreage(isComplete) {
+      isComplete? localStorage.clear() :null;
       setTimeout(function () {
         location.reload();
       }, 3000); 
@@ -557,7 +557,7 @@
 
        
           setTimeout(function () {
-            clearStoreage(); 
+            clearStoreage(true); 
           }, 2000);  
 
         },
@@ -565,9 +565,9 @@
           console.log("Request failed!");
           console.log("Status: " + status);
           console.log("Error: " + error);
-
+          alert("Order Place UnSuccessfully. Please Try Again");
           $('#waitingModal').modal('hide');
-          clearStoreage();
+          clearStoreage(false);
         }
       });
 
