@@ -514,13 +514,13 @@
 
     function clearStoreage() {
       localStorage.clear();
-      // Delay the reload to allow modal to show
       setTimeout(function () {
         location.reload();
-      }, 3000); // 3 seconds delay before reloading
+      }, 3000); 
     }
 
     function PlaceOrder() {
+
       const PayForm = document.forms['PayDetailForm'];
       var f_name = PayForm['f_name'].value;
       let l_name = PayForm['l_name'].value;
